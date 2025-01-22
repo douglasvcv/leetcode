@@ -1,13 +1,11 @@
 var passThePillow = function(n, time) {
-  if(n>time) return time +1
-
-  const cycle = Math.floor(time/(n-1))
-  const timeLeft = time % (n-1)
-  if(cycle%2 == 0){
-    return 1 +timeLeft
-  }else{
-    return n - timeLeft
-  }
+    let i = 1,
+        k = 1;
+    while (time-- > 0) {
+        i += k;
+        if (i === 1 || i === n) {
+            k *= -1;
+        }
+    }
+    return i
 };
-
-module.exports = passThePillow
