@@ -3,6 +3,7 @@ var largestAltitude = function(gain) {
     gain.unshift(0)
     for(let i = 0; i<gain.length; i++){
         if(gain[i]>topNumber || gain[i]==topNumber){
+          
             topNumber=i
         }
     }
